@@ -10,8 +10,10 @@ class File:
 
 files=[]
     
-def loadFiles(addr):
-    for address in addr:
+def loadFiles(root_path):
+    for root in root_path:
+        for a, b, files in os.walk(root):
+            
         
         #file.append dict for every file
     
