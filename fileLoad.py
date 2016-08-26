@@ -14,5 +14,6 @@ def loadFiles(root_path):
                 temp_dict['text']=temp_file.read()
                 temp_dict['label']=str(root).strip().split('/')[-2]
                 files_list.append(temp_dict)
+    print '\nAll files loaded!!'
     return files_list
     
