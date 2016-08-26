@@ -9,16 +9,16 @@ politics_loc='/home/shubham/Desktop_files/news_classification/news-sort-master/D
 entertainment_loc='/home/shubham/Desktop_files/news_classification/news-sort-master/Different-news-articles-classified-master/Training set/entertainment/'
 files=[business_loc, sport_loc, tech_loc, politics_loc, entertainment_loc]
 
-openfil1=open(business_loc+str('001.txt') , 'r')
+'''openfil1=open(business_loc+str('001.txt') , 'r')
 openfil2=open(business_loc+str('002.txt') , 'r')
-openfil3=open(business_loc+str('003.txt') , 'r')
+openfil3=open(business_loc+str('003.txt') , 'r')'''
 
 loaded=fileLoad.loadFiles(files)
 
-string1=openfil1.read()
+'''string1=openfil1.read()
 string2=openfil2.read()
 string3=openfil3.read()
 l=[string1, string2, string3]
 cv=CountVectorizer()
 sparse_matrix_bow=cv.fit_transform(l)
-print sparse_matrix_bow
+print sparse_matrix_bow'''
