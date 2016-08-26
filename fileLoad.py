@@ -6,6 +6,8 @@ class File:
     #tags
     #bag_of_words
     #Text
+
+
     
 def loadFiles():
     
