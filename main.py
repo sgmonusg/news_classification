@@ -11,4 +11,5 @@ files=[business_loc, sport_loc, tech_loc, politics_loc, entertainment_loc]
 loaded=fileLoad.loadFiles(files)
 if loaded:
     print 'Files Received!'
+
 newsPipeline.buildPipeline(loaded)
