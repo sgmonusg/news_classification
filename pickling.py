@@ -3,7 +3,7 @@ import cPickle as pickle
 import os.path
 
 def pickleClassifier(classifier):
-    f=open('clssifier.pickle', 'wb')
+    f=open('classifier.pickle', 'wb')
     pickle.dump(classifier, f)
     f.close()
     print 'Classifier pickled successfully!!'
@@ -16,8 +16,5 @@ def loadPickled(path):
     'Classifier loaded successfully!!'
     
 def checkPickle(location): #make the function check for any pickle files
-    if os.path.isfile(location):
-        return 1
-    else:
-        return 0
+    return os.path.isfile(location)
     

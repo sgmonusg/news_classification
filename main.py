@@ -12,4 +12,4 @@ loaded=fileLoad.loadFiles(files)
 if loaded:
     print 'Files Received!'
 
-newsPipeline.buildPipeline(loaded)
+grid_search=newsPipeline.buildPipeline(loaded)

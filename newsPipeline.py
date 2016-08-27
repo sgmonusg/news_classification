@@ -9,7 +9,7 @@ from pickling import pickleClassifier
 from pickling import loadPickled
 from pickling import checkPickle
 
-picklePath='/home/shubham/Desktop_files/news_classification/news-sort-master/classifier.pickle'
+picklePath='/home/shubham/Desktop_files/news_classification/news-classification/classifier.pickle'
 def buildPipeline(loaded):
     text_arr=[]
     label_arr=[]
@@ -18,6 +18,7 @@ def buildPipeline(loaded):
         label_arr.append(x['label'])
     pipeline=Pipeline([('vect', CountVectorizer()), ('tfidf', TfidfTransformer()), ('clf',KNeighborsClassifier())])
     parameters={'vect__stop_words':['english'],'vect__decode_error':('ignore', 'replace'), 'tfidf__use_idf':(True, False), 'clf__n_neighbors':(1,2,3,4,5,6,7,8)} ###difjldjfdfkjfk
+    
     if checkPickle(picklePath)==False:
         grid_search=GridSearchCV(pipeline, parameters, verbose=4, cv=5)
         print "Performing Grid Search"
