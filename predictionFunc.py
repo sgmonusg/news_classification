@@ -5,7 +5,8 @@ import sklearn
 final_predictions=[]
 
 def predictionFunction(classifier, predDict):
-    print 'prediction function not yet built'
-    for x in predDict:
-        final_predictions.append(classifier.predict(x['text']))
+    #for x in predDict:
+    temp=predDict[0]
+    final_predictions=classifier.predict(temp['text'])
     print final_predictions
+    print final_predictions.shape
